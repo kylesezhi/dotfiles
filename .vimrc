@@ -1,6 +1,8 @@
 " ---------------------------------------------------------------------
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
+" Install plugins with:
+" :PlugInstall
 call plug#begin('~/.vim/plugplugplug')
 
 " Cool bottom line
@@ -23,7 +25,8 @@ Plug 'w0rp/ale'
 Plug 'valloric/youcompleteme'
 
 " Surround selected text
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 " Comment out code
 Plug 'tpope/vim-commentary'
@@ -127,3 +130,6 @@ nnoremap <Leader>w :w<CR>
 
 " Quit with Leader q
 nnoremap <Leader>q :qa<CR>
+
+" Close tab with Leader c
+nnoremap <Leader>c :q<CR>
