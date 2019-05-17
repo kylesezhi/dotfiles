@@ -41,6 +41,12 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " ---------------------------------------------------------------------
 
+" Pretty colors
+colorscheme ron
+
+" When lazy use mouse
+set mouse=a
+
 " NERD hot key: Ctrl O
 map <C-o> :NERDTreeTabsToggle<CR>
 
@@ -52,6 +58,26 @@ let NERDTreeShowHidden=1
 
 " NERD width
 let g:NERDTreeWinSize=40
+
+" NerdTree colors
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+  exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+  exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('pug', 'red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('html', 'red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('md', 'magenta', 'none', 'blue', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('less', 'brown', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'brown', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('js', 'darkgreen', 'none', 'darkgreen', '#151515')
+call NERDTreeHighlightFile('jsx', 'darkgreen', 'none', 'darkgreen', '#151515')
+call NERDTreeHighlightFile('purs', 'darkgreen', 'none', 'darkgreen', '#151515')
+call NERDTreeHighlightFile('elm', 'darkgreen', 'none', 'darkgreen', '#151515')
+call NERDTreeHighlightFile('Dockerfile', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
 
 " For lightline to display correctly
 set laststatus=2
