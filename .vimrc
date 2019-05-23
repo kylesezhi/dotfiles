@@ -1,4 +1,6 @@
 " ---------------------------------------------------------------------
+" First install vim-plug as it says here:
+" https://github.com/junegunn/vim-plug#installation
 " Specify a directory for plugins
 " - Avoid using standard Vim directory names like 'plugin'
 " Install plugins with:
