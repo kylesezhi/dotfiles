@@ -39,6 +39,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 " Developer icons
 Plug 'ryanoasis/vim-devicons'
 
+" Install nerd version of fonts
+Plug 'ryanoasis/nerd-fonts'
+
 " Initialize plugin system
 call plug#end()
 " ---------------------------------------------------------------------
@@ -84,7 +87,7 @@ call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
 " For lightline to display correctly
 set laststatus=2
 
-" fzf search filenames to Ctrl F
+" fzf search filenames to Ctrl P
 map <C-p> :Files<CR>
 
 " fzf search documents to Ctrl F
