@@ -10,7 +10,7 @@ set -o vi
 kae () { git grep --name-only $1 | xargs sed -i "s/$1/$2/"; }
 
 # Change Prompt
-emoji="| ⭐ "
+emoji="| ⭐  "
 export PS1="____________________________________________________________\n| \[\033[1;34m\]\!\[\033[0m\] \[\033[1;35m\]\u\[\033[0m\] @ \[\033[1;35m\]\w\[\033[0m\]\n$emoji"
 export PS2="$emoji"
 
