@@ -21,14 +21,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 echo "Installing vim plugins"
 vim +'PlugInstall --sync' +qa
 
-echo "Installing Fira Code nerd font"
-~/.vim/plugplugplug/nerd-fonts/install.sh FiraCode
+# echo "Installing Fira Code nerd font"
+# ~/.vim/plugplugplug/nerd-fonts/install.sh FiraCode
 
 echo "Installing Mac OS software"
 brew install ag
 
-# Need these for You Complete Me in vim
+# You Complete Me in vim
 brew install cmake macvim
-
-
 sudo ~/.vim/plugplugplug/youcompleteme/install.py --all
