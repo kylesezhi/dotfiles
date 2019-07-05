@@ -7,6 +7,8 @@ THISDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 VIM="/.vimrc"
 TMUX="/.tmux.conf"
 
+sudo apt-get install vim tmux -y
+
 echo "Making symlinks to .vimrc and .tmux.conf"
 ln -s $THISDIR$VIM ~/$VIM
 ln -s $THISDIR$TMUX ~/$TMUX
@@ -26,6 +28,4 @@ sudo apt-get install silversearcher-ag -y
 
 # Need these for You Complete Me in vim
 sudo apt install build-essential cmake3 python3-dev -y
-
-
 sudo ~/.vim/plugplugplug/youcompleteme/install.py --all
