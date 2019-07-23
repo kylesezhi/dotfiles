@@ -17,7 +17,7 @@ git clone https://github.com/rupa/z.git
 echo ". $THISDIR/z/z.sh" >> $THISDIR$BASH
 
 echo "Configuring git"
-git config --global alias.ac '!git add && git commit'
+git config --global alias.ac '!git add -A && git commit'
 git config --global alias.co checkout
 
 echo "Making symlinks to .vimrc and .tmux.conf"
