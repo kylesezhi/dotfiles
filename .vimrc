@@ -36,12 +36,6 @@ Plug 'tpope/vim-commentary'
 " Show indentation
 Plug 'nathanaelkane/vim-indent-guides'
 
-" Developer icons
-Plug 'ryanoasis/vim-devicons'
-
-" Install nerd version of fonts
-Plug 'ryanoasis/nerd-fonts'
-
 " Initialize plugin system
 call plug#end()
 " ---------------------------------------------------------------------

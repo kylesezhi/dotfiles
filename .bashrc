@@ -1,6 +1,3 @@
-# Use z.sh
-. ~/z.sh
-
 # Vim mode in bash
 set -o vi
 
