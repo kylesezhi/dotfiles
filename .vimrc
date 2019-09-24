@@ -49,7 +49,7 @@ set mouse=a
 " NERD hot key: Ctrl O
 map <C-o> :NERDTreeTabsToggle<CR>
 
-" NERD open files in new tab
+" NERD open files in new tab with Enter key
 " let NERDTreeMapOpenInTab='<ENTER>'
 
 " NERD Show invisible files in
@@ -98,17 +98,6 @@ inoremap ( ()<Esc>i
 inoremap { {}<Esc>i
 inoremap < <><Esc>i
 inoremap [ []<Esc>i
-
-" Tabs by Leader + number
-noremap <Leader>1 1gt
-noremap <Leader>2 2gt
-noremap <Leader>3 3gt
-noremap <Leader>4 4gt
-noremap <Leader>5 5gt
-noremap <Leader>6 6gt
-noremap <Leader>7 7gt
-noremap <Leader>8 8gt
-noremap <Leader>9 :tablast<CR>
 
 " Handle weird delete button
 fixdel
