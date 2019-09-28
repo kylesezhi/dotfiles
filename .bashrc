@@ -17,6 +17,7 @@ alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
 alias less='less -FSRXc'                    # Preferred 'less' implementation
+alias rm='rm -i'                            # Preferred 'rm' implementation
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 alias ~='cd ~'
 alias gst='git status'
