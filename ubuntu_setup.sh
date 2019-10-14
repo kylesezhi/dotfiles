@@ -33,6 +33,7 @@ vim +'PlugInstall --sync' +qa
 
 echo "Installing Linux software"
 sudo apt-get install silversearcher-ag -y
+sudo apt install rename
 
 echo "Installing dependencies for You Complete Me"
 sudo apt install build-essential cmake3 python3-dev -y
