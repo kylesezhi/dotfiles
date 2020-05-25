@@ -43,6 +43,7 @@ brew update
 ################################################################################
 CASKS=(
 	alfred
+  calibre
 	expressvpn
 	firefox
 	google-chrome
