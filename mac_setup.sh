@@ -9,35 +9,67 @@ BASH="/.bashrc"
 TMUX="/.tmux.conf"
 
 ################################################################################
-echo "Making symlinks to .vimrc, .tmux.conf and .bash_profile"
-ln -s $THISDIR$VIM ~/$VIM
-ln -s $THISDIR$TMUX ~/$TMUX
-ln -s $THISDIR$BASH ~/$BASH
-ln -s ~/.bashrc ~/.bash_profile
+echo "Making symlink to .vimrc, .tmux.conf and .bash_profile"
+if [ ! -f $THISDIR$VIM ]; then
+	ln -s $THISDIR$VIM ~/$VIM
+fi
 
-################################################################################
-echo "Installing vim-plug"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ ! -f $THISDIR$VIM ]; then
+	ln -s $THISDIR$TMUX ~/$TMUX
+fi
 
-echo "Installing vim plugins"
-vim +'PlugInstall --sync' +qa
+if [ ! -f $THISDIR$VIM ]; then
+	ln -s $THISDIR$BASH ~/$BASH
+fi
 
-################################################################################
-# echo "Installing Fira Code nerd font"
-# ~/.vim/plugplugplug/nerd-fonts/install.sh FiraCode
-
-################################################################################
-echo "Installing brews 🍺"
-if [ -e $cwd/swag/brews ]; then
-	chapter "Installing Homebrew formulae…"
-
-	for brew in $(<$cwd/swag/brews); do
-		install_brews $brew
-	done
+if [ ! -f $THISDIR$VIM ]; then
+	ln -s ~/.bashrc ~/.bash_profile
 fi
 
 ################################################################################
-echo "Installing You Complete Me"
-sudo ~/.vim/plugplugplug/youcompleteme/install.py --all
+# echo "Installing xcode CLI"
+# xcode-select —-install
+
+################################################################################
+if test ! $(which brew); then
+	echo "Installing homebrew"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+################################################################################
+echo "Updating homebrew formulae"
+brew update
+
+################################################################################
+CASKS=(
+	alfred
+	expressvpn
+	firefox
+	google-chrome
+	iina
+	iterm2
+	slack
+	spotify
+	visual-studio-code
+	evernote
+	xquartz
+)
+echo "Installing cask apps"
+brew cask install ${CASKS[@]}
+
+################################################################################
+echo "Installing homebrew packages"
+PACKAGES=(
+	exercism
+	git
+	htop
+	macvim
+	mps-youtube
+	tldr
+	tmux
+	wget
+	yarn
+)
+echo "Installing packages..."
+brew install ${PACKAGES[@]}
 
