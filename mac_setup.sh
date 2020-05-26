@@ -49,6 +49,7 @@ CASKS=(
 	google-chrome
 	iina
 	iterm2
+  microsoft-office
   omnidisksweeper
 	slack
 	spotify
