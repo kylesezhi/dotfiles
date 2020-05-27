@@ -55,6 +55,7 @@ CASKS=(
 	spotify
 	visual-studio-code
 	evernote
+  whatsapp
 	xquartz
 )
 echo "Installing cask apps"
