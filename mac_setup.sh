@@ -43,6 +43,7 @@ brew update
 ################################################################################
 CASKS=(
 	alfred
+  angry-ip-scanner
   calibre
 	expressvpn
 	firefox
