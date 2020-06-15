@@ -68,11 +68,13 @@ PACKAGES=(
 	git
 	htop
 	macvim
+  magic-wormhole
 	mps-youtube
 	tldr
 	tmux
 	wget
 	yarn
+  zoomus
 )
 echo "Installing packages..."
 brew install ${PACKAGES[@]}
