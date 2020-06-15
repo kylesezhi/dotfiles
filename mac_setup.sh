@@ -57,6 +57,7 @@ CASKS=(
 	evernote
   whatsapp
 	xquartz
+  zoomus
 )
 echo "Installing cask apps"
 brew cask install ${CASKS[@]}
@@ -74,7 +75,6 @@ PACKAGES=(
 	tmux
 	wget
 	yarn
-  zoomus
 )
 echo "Installing packages..."
 brew install ${PACKAGES[@]}
