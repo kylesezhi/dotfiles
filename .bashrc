@@ -22,3 +22,5 @@ cd() { builtin cd "$@"; ll; }               # Always list directory contents upo
 alias ~='cd ~'
 alias gst='git status'
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd: Makes new Dir and jumps inside
+
+source ./.bash_local

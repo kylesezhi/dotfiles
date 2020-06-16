@@ -50,6 +50,7 @@ CASKS=(
 	iina
 	iterm2
   microsoft-office
+  nvm
   omnidisksweeper
 	slack
 	spotify
