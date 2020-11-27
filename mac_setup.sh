@@ -52,6 +52,7 @@ CASKS=(
   microsoft-office
   nvm
   omnidisksweeper
+  rectangle
 	slack
 	spotify
 	visual-studio-code
