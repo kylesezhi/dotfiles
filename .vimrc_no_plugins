@@ -1,0 +1,63 @@
+" Pretty colors
+colorscheme ron
+
+" When lazy use mouse
+set mouse=a
+
+" jk to go to Normal from Insert
+inoremap jk <esc>
+
+" Bracket completion
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap < <><Esc>i
+inoremap [ []<Esc>i
+
+" Handle weird delete button
+fixdel
+
+" Show line numbers
+set number
+set relativenumber
+
+" Highlight search results
+set hlsearch
+
+" Autoindent
+" set ai
+filetype plugin indent on
+
+" On pressing tab, insert 2 spaces
+set expandtab
+
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+
+" Highlight current line
+set cursorline
+hi CursorLine cterm=NONE ctermbg=darkgray ctermfg=white
+
+" Tabs shortcuts
+nnoremap tn :tabnew<Space>
+
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+
+nnoremap th :tabfirst<CR>
+nnoremap tl :tablast<CR>
+
+" Make our Leader key in vim the space bar
+let mapleader = "\<Space>"
+
+" Save with Leader w
+nnoremap <Leader>w :w<CR>
+
+" Quit with Leader q
+nnoremap <Leader>q :qa<CR>
+
+" Close tab with Leader c
+nnoremap <Leader>c :q<CR>
